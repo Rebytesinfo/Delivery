@@ -426,11 +426,11 @@
 
             });
 
-            let totalComfrete = total + frete;
+            let totalComfrete = Number(total) + Number(frete);
+
+            mensagem += `Frete: ${frete}%0A%0A`;
 
             mensagem += `%0ATotal: R$ ${totalComfrete}%0A`;
-            
-            mensagem += `Frete: ${frete}%0A%0A`;
 
             mensagem += `Pagamento: ${pagamento}%0A`;
 
