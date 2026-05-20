@@ -21,14 +21,14 @@
         }
 
         #carouselExample {
-            width: 1000px;
+            width: 1300px;
             /* largura */
             margin: auto;
             /* centraliza */
         }
 
         .carousel-item img {
-            height: 300px;
+            height: 250px;
             object-fit: cover;
         }
     </style>
@@ -233,8 +233,25 @@
                 <label class="form-label">
                     Endereço
                 </label>
-
                 <input type="text" id="endereco" class="form-control">
+            </div>
+            <div class="mt-3">
+                <label class="form-label">
+                    Bairro
+                </label>
+
+                <select id="bairro" class="form-select">
+
+                    <option>Dom Pedro I</option>
+
+                    <option>Cachoeira</option>
+
+                    <option>Lar de Minas</option>
+
+                    <option>Jardim Encantado</option>
+
+                </select>
+
             </div>
             <div class="mt-3">
                 <label class="form-label">
@@ -254,7 +271,15 @@
                 </select>
 
             </div>
+            <div class="mt-3">
 
+                <label class="form-label">
+                    Frete
+                </label>
+
+                <input type="text" id="frete" class="form-control" placeholder="Ex: 100">
+
+            </div>
             <!-- PAGAMENTO -->
             <div class="mt-3">
 
@@ -293,7 +318,7 @@
                 Finalizar Pedido
 
             </button>
-            
+
 
         </div>
 
@@ -365,12 +390,17 @@
 
             let endereco =
                 document.getElementById("endereco").value;
-            
+            let bairro =
+                document.getElementById("bairro").value;
+
             let cidade =
                 document.getElementById("cidade").value;
 
             let pagamento =
                 document.getElementById("pagamento").value;
+
+            let frete =
+                document.getElementById("frete").value;
 
             let troco =
                 document.getElementById("troco").value;
@@ -382,7 +412,11 @@
 
             mensagem += `Endereço: ${endereco}%0A`;
 
+            mensagem += `Bairro: ${bairro}%0A`;
+
             mensagem += `Cidade: ${cidade}%0A%0A`;
+
+            mensagem += `Frete: ${frete}%0A%0A`;
 
             mensagem += `*Produtos:*%0A`;
 
@@ -402,7 +436,7 @@
 
             }
 
-            let numero = "5531989356164";
+            let numero = "5531992835225";
 
             let url =
                 `https://wa.me/${numero}?text=${mensagem}`;
