@@ -416,7 +416,7 @@
 
             mensagem += `Cidade: ${cidade}%0A%0A`;
 
-            mensagem += `Frete: ${frete}%0A%0A`;
+            
 
             mensagem += `*Produtos:*%0A`;
 
@@ -426,7 +426,11 @@
 
             });
 
-            mensagem += `%0ATotal: R$ ${total}%0A`;
+            let totalComfrete = total + frete;
+
+            mensagem += `%0ATotal: R$ ${totalComfrete}%0A`;
+            
+            mensagem += `Frete: ${frete}%0A%0A`;
 
             mensagem += `Pagamento: ${pagamento}%0A`;
 
