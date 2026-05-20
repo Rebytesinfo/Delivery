@@ -416,8 +416,6 @@
 
             mensagem += `Cidade: ${cidade}%0A%0A`;
 
-            
-
             mensagem += `*Produtos:*%0A`;
 
             carrinho.forEach(item => {
@@ -425,20 +423,20 @@
                 mensagem += `- ${item.nome} | R$ ${item.valor}%0A`;
 
             });
+            let freteNumero = Number(frete) || 0;
+            let trocoNumero = Number(troco) || 0;
 
-            let totalComfrete = Number(total) + Number(frete);
+            let totalComfrete = total + freteNumero;
 
-            
             mensagem += `%0ATotal: R$ ${totalComfrete.toFixed(2)}%0A`;
 
-            mensagem += `Frete: ${Number(frete).toFixed(2)}%0A%0A`;
+            mensagem += `Frete: R$ ${freteNumero.toFixed(2)}%0A%0A`;
 
             mensagem += `Pagamento: ${pagamento}%0A`;
 
             if (pagamento == "Dinheiro") {
 
-                mensagem += `Troco para: R$ ${troco}%0A`;
-
+                mensagem += `Troco para: R$ ${trocoNumero.toFixed(2)}%0A`;
             }
 
             let numero = "5531992835225";
