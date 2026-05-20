@@ -428,9 +428,12 @@
 
             let totalComfrete = total + freteNumero;
 
+            mensagem += `*Valor a Pagar:*%0A`;
+            
+            mensagem += `Frete: R$ ${freteNumero.toFixed(2)}%0A%0A`;
+            
             mensagem += `%0ATotal: R$ ${totalComfrete.toFixed(2)}%0A`;
 
-            mensagem += `Frete: R$ ${freteNumero.toFixed(2)}%0A%0A`;
 
             mensagem += `Pagamento: ${pagamento}%0A`;
 
